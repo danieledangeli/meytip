@@ -1,0 +1,74 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Scorers
+ *
+ * @ORM\Table(name="scorers")
+ * @ORM\Entity
+ */
+class Scorers
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="uniqueid", type="string", length=15, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $uniqueid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=false)
+     */
+    private $matchid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=20, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="period", type="integer", nullable=true)
+     */
+    private $period;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="teamid", type="integer", nullable=false)
+     */
+    private $teamid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="scoretime", type="integer", nullable=false)
+     */
+    private $scoretime;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="scoretype", type="string", length=20, nullable=true)
+     */
+    private $scoretype;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="timelogged", type="datetime", nullable=true)
+     */
+    private $timelogged;
+
+
+}

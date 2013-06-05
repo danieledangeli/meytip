@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Groups" table="groups">
+    <id name="code" type="integer" column="code">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="group" type="string" column="group" length="8" nullable="true"/>
+    <field name="description" type="string" column="description" length="50" nullable="true"/>
+    <field name="sport" type="string" column="sport" length="15" nullable="true"/>
+    <field name="verified" type="datetime" column="verified" nullable="true"/>
+    <field name="sportid" type="integer" column="sportid" nullable="false"/>
+  </entity>
+</doctrine-mapping>

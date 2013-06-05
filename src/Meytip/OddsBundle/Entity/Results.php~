@@ -1,0 +1,76 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Results
+ *
+ * @ORM\Table(name="results")
+ * @ORM\Entity
+ */
+class Results
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $matchid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="resultsid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $resultsid;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="timelogged", type="datetime", nullable=true)
+     */
+    private $timelogged;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="hscore", type="integer", nullable=true)
+     */
+    private $hscore;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ascore", type="integer", nullable=true)
+     */
+    private $ascore;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=30, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="homeid", type="integer", nullable=true)
+     */
+    private $homeid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="awayid", type="integer", nullable=true)
+     */
+    private $awayid;
+
+
+}

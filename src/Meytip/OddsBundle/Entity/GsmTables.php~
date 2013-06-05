@@ -1,0 +1,60 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * GsmTables
+ *
+ * @ORM\Table(name="gsm_tables")
+ * @ORM\Entity
+ */
+class GsmTables
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="unique_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $uniqueId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="round_id", type="integer", nullable=true)
+     */
+    private $roundId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=100, nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="table_type", type="string", length=20, nullable=true)
+     */
+    private $tableType;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=false)
+     */
+    private $lastUpdated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="season_id", type="integer", nullable=true)
+     */
+    private $seasonId;
+
+
+}

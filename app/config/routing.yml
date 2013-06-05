@@ -1,0 +1,4 @@
+meytip_odds:
+    resource: "@MeytipOddsBundle/Resources/config/routing.yml"
+    prefix:   /
+

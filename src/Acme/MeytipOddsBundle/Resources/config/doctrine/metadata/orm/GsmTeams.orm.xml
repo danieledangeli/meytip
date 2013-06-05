@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="GsmTeams" table="gsm_teams">
+    <id name="teamid" type="integer" column="teamid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="gsmTeamid" type="integer" column="gsm_teamid" nullable="false"/>
+    <field name="gsmTeamName" type="string" column="gsm_team_name" length="50" nullable="true"/>
+    <field name="timelogged" type="datetime" column="timelogged" nullable="true"/>
+    <field name="logo" type="string" column="logo" length="255" nullable="true"/>
+    <field name="type" type="string" column="type" length="30" nullable="true"/>
+    <field name="teamtype" type="string" column="teamtype" length="30" nullable="true"/>
+    <field name="areaId" type="integer" column="area_id" nullable="true"/>
+    <field name="officialName" type="string" column="official_name" length="50" nullable="true"/>
+    <field name="city" type="string" column="city" length="100" nullable="true"/>
+    <field name="country" type="string" column="country" length="30" nullable="true"/>
+    <field name="address" type="string" column="address" length="255" nullable="true"/>
+    <field name="addressNumber" type="string" column="address_number" length="30" nullable="true"/>
+    <field name="addressExtra" type="string" column="address_extra" length="100" nullable="true"/>
+    <field name="addressZip" type="string" column="address_zip" length="50" nullable="true"/>
+    <field name="postalAddress" type="string" column="postal_address" length="255" nullable="true"/>
+    <field name="postalNumber" type="string" column="postal_number" length="30" nullable="true"/>
+    <field name="postalExtra" type="string" column="postal_extra" length="100" nullable="true"/>
+    <field name="postalZip" type="string" column="postal_zip" length="50" nullable="true"/>
+    <field name="telephone" type="string" column="telephone" length="50" nullable="true"/>
+    <field name="url" type="string" column="url" length="255" nullable="true"/>
+    <field name="email" type="string" column="email" length="100" nullable="true"/>
+    <field name="founded" type="string" column="founded" length="12" nullable="true"/>
+    <field name="clubColors" type="string" column="club_colors" length="100" nullable="true"/>
+    <field name="clothing" type="string" column="clothing" length="50" nullable="true"/>
+    <field name="sponsor" type="string" column="sponsor" length="50" nullable="true"/>
+    <field name="details" type="string" column="details" length="100" nullable="true"/>
+    <field name="soccertype" type="string" column="soccertype" length="30" nullable="true"/>
+    <field name="fax" type="string" column="fax" length="30" nullable="true"/>
+    <field name="sportid" type="integer" column="sportid" nullable="true"/>
+    <field name="mapped" type="string" column="mapped" length="1" nullable="true"/>
+  </entity>
+</doctrine-mapping>

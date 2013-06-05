@@ -1,0 +1,235 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * GsmTeams
+ *
+ * @ORM\Table(name="gsm_teams")
+ * @ORM\Entity
+ */
+class GsmTeams
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="teamid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $teamid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_teamid", type="integer", nullable=false)
+     */
+    private $gsmTeamid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_team_name", type="string", length=50, nullable=true)
+     */
+    private $gsmTeamName;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="timelogged", type="datetime", nullable=true)
+     */
+    private $timelogged;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="logo", type="string", length=255, nullable=true)
+     */
+    private $logo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=30, nullable=true)
+     */
+    private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="teamtype", type="string", length=30, nullable=true)
+     */
+    private $teamtype;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="area_id", type="integer", nullable=true)
+     */
+    private $areaId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="official_name", type="string", length=50, nullable=true)
+     */
+    private $officialName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="city", type="string", length=100, nullable=true)
+     */
+    private $city;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="country", type="string", length=30, nullable=true)
+     */
+    private $country;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="address", type="string", length=255, nullable=true)
+     */
+    private $address;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="address_number", type="string", length=30, nullable=true)
+     */
+    private $addressNumber;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="address_extra", type="string", length=100, nullable=true)
+     */
+    private $addressExtra;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="address_zip", type="string", length=50, nullable=true)
+     */
+    private $addressZip;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="postal_address", type="string", length=255, nullable=true)
+     */
+    private $postalAddress;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="postal_number", type="string", length=30, nullable=true)
+     */
+    private $postalNumber;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="postal_extra", type="string", length=100, nullable=true)
+     */
+    private $postalExtra;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="postal_zip", type="string", length=50, nullable=true)
+     */
+    private $postalZip;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length=50, nullable=true)
+     */
+    private $telephone;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
+     */
+    private $url;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=100, nullable=true)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="founded", type="string", length=12, nullable=true)
+     */
+    private $founded;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="club_colors", type="string", length=100, nullable=true)
+     */
+    private $clubColors;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="clothing", type="string", length=50, nullable=true)
+     */
+    private $clothing;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sponsor", type="string", length=50, nullable=true)
+     */
+    private $sponsor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="details", type="string", length=100, nullable=true)
+     */
+    private $details;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="soccertype", type="string", length=30, nullable=true)
+     */
+    private $soccertype;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fax", type="string", length=30, nullable=true)
+     */
+    private $fax;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sportid", type="integer", nullable=true)
+     */
+    private $sportid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mapped", type="string", length=1, nullable=true)
+     */
+    private $mapped;
+
+
+}

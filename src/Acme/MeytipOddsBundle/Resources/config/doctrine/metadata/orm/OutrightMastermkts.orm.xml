@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="OutrightMastermkts" table="outright_mastermkts">
+    <id name="groupid" type="integer" column="groupid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="marketname" type="string" column="marketname" length="50" nullable="true"/>
+    <field name="typeid" type="integer" column="typeid" nullable="true"/>
+    <field name="status" type="integer" column="status" nullable="true"/>
+    <field name="subscribe" type="string" column="subscribe" length="1" nullable="true"/>
+    <field name="ccid" type="integer" column="ccid" nullable="true"/>
+    <field name="country" type="string" column="country" length="30" nullable="true"/>
+    <field name="sportid" type="integer" column="sportid" nullable="true"/>
+  </entity>
+</doctrine-mapping>

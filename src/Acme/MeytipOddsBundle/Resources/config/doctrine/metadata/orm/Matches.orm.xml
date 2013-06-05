@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Matches" table="matches">
+    <id name="matchid" type="integer" column="matchid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="matchname" type="string" column="matchname" length="50" nullable="false"/>
+    <field name="eventname" type="string" column="eventname" length="50" nullable="false"/>
+    <field name="starttime" type="datetime" column="starttime" nullable="false"/>
+    <field name="timelogged" type="datetime" column="timelogged" nullable="false"/>
+    <field name="country" type="string" column="country" length="20" nullable="false"/>
+    <field name="league" type="string" column="league" length="30" nullable="false"/>
+    <field name="groupid" type="integer" column="groupid" nullable="false"/>
+    <field name="leagueid" type="integer" column="leagueid" nullable="false"/>
+    <field name="xsid" type="integer" column="xsid" nullable="true"/>
+    <field name="matchstatus" type="string" column="matchstatus" length="10" nullable="true"/>
+    <field name="hscore" type="integer" column="hscore" nullable="true"/>
+    <field name="ascore" type="integer" column="ascore" nullable="true"/>
+    <field name="sportid" type="integer" column="sportid" nullable="false"/>
+    <field name="hteamid" type="integer" column="hteamid" nullable="false"/>
+    <field name="ateamid" type="integer" column="ateamid" nullable="false"/>
+    <field name="ccid" type="integer" column="ccid" nullable="false"/>
+    <field name="gsmid" type="integer" column="gsmid" nullable="true"/>
+    <field name="scoresUpdated" type="datetime" column="scores_updated" nullable="false"/>
+    <field name="matchTime" type="string" column="match_time" length="8" nullable="true"/>
+    <field name="gsmlive" type="string" column="gsmlive" length="1" nullable="true"/>
+    <field name="serviceLevel" type="string" column="service_level" length="5" nullable="true"/>
+  </entity>
+</doctrine-mapping>

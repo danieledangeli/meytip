@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="OutrightMkts" table="outright_mkts">
+    <id name="marketid" type="integer" column="marketid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="marketname" type="string" column="marketname" length="50" nullable="true"/>
+    <field name="groupid" type="integer" column="groupid" nullable="true"/>
+    <field name="groupname" type="string" column="groupname" length="50" nullable="true"/>
+    <field name="typeid" type="integer" column="typeid" nullable="true"/>
+    <field name="bfstarttime" type="datetime" column="bfstarttime" nullable="true"/>
+    <field name="active" type="string" column="active" length="10" nullable="true"/>
+  </entity>
+</doctrine-mapping>

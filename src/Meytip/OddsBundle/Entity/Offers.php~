@@ -1,0 +1,88 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Offers
+ *
+ * @ORM\Table(name="offers")
+ * @ORM\Entity
+ */
+class Offers
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="offer_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $offerId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="bid", type="integer", nullable=false)
+     */
+    private $bid;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="active", type="boolean", nullable=true)
+     */
+    private $active;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=true)
+     */
+    private $lastUpdated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sportid", type="integer", nullable=false)
+     */
+    private $sportid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=false)
+     */
+    private $matchid;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_change", type="datetime", nullable=false)
+     */
+    private $lastChange;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ot", type="integer", nullable=false)
+     */
+    private $ot;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bmoid", type="string", length=30, nullable=true)
+     */
+    private $bmoid;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="starting_time", type="datetime", nullable=true)
+     */
+    private $startingTime;
+
+
+}

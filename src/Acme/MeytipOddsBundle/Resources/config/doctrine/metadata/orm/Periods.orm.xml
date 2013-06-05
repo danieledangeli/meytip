@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Periods" table="periods">
+    <id name="matchid" type="integer" column="matchid"/>
+    <id name="id" type="integer" column="id"/>
+    <field name="name" type="string" column="name" length="12" nullable="true"/>
+    <field name="detail" type="string" column="detail" length="12" nullable="true"/>
+    <field name="timelogged" type="datetime" column="timelogged" nullable="true"/>
+    <field name="hscore" type="integer" column="hscore" nullable="true"/>
+    <field name="ascore" type="integer" column="ascore" nullable="true"/>
+  </entity>
+</doctrine-mapping>

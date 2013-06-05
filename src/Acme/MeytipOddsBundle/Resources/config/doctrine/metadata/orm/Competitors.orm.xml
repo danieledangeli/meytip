@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Competitors" table="competitors">
+    <id name="id" type="bigint" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="teamname" type="string" column="teamname" length="50" nullable="false"/>
+    <field name="alias" type="string" column="alias" length="50" nullable="true"/>
+    <field name="shortcode" type="string" column="shortcode" length="4" nullable="true"/>
+    <field name="sportid" type="integer" column="sportid" nullable="true"/>
+    <field name="countryid" type="integer" column="countryid" nullable="true"/>
+    <field name="group" type="string" column="group" length="15" nullable="true"/>
+    <field name="lastVerified" type="datetime" column="last_verified" nullable="true"/>
+  </entity>
+</doctrine-mapping>

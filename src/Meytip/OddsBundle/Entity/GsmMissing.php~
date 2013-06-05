@@ -1,0 +1,137 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * GsmMissing
+ *
+ * @ORM\Table(name="gsm_missing")
+ * @ORM\Entity
+ */
+class GsmMissing
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsmid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $gsmid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_comp_id", type="integer", nullable=true)
+     */
+    private $gsmCompId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_comp_name", type="string", length=50, nullable=true)
+     */
+    private $gsmCompName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_round_id", type="integer", nullable=true)
+     */
+    private $gsmRoundId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_round_name", type="string", length=50, nullable=true)
+     */
+    private $gsmRoundName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_group_id", type="integer", nullable=true)
+     */
+    private $gsmGroupId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_group_name", type="string", length=50, nullable=true)
+     */
+    private $gsmGroupName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_season_id", type="integer", nullable=true)
+     */
+    private $gsmSeasonId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_season_name", type="string", length=50, nullable=true)
+     */
+    private $gsmSeasonName;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="timelogged", type="datetime", nullable=false)
+     */
+    private $timelogged;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="home_team_id", type="integer", nullable=true)
+     */
+    private $homeTeamId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="away_team_id", type="integer", nullable=true)
+     */
+    private $awayTeamId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="home_team_name", type="string", length=50, nullable=true)
+     */
+    private $homeTeamName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="away_team_name", type="string", length=50, nullable=true)
+     */
+    private $awayTeamName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="area_name", type="string", length=50, nullable=true)
+     */
+    private $areaName;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="start_date", type="date", nullable=true)
+     */
+    private $startDate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="start_time", type="time", nullable=true)
+     */
+    private $startTime;
+
+
+}

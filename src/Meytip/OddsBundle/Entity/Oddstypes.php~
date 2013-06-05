@@ -1,0 +1,60 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Oddstypes
+ *
+ * @ORM\Table(name="oddstypes")
+ * @ORM\Entity
+ */
+class Oddstypes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ot", type="bigint", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $ot;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="oddsname", type="string", length=20, nullable=false)
+     */
+    private $oddsname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tablename", type="string", length=20, nullable=true)
+     */
+    private $tablename;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="movestablename", type="string", length=20, nullable=true)
+     */
+    private $movestablename;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="valid", type="smallint", nullable=true)
+     */
+    private $valid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sortdrawprice", type="string", length=1, nullable=true)
+     */
+    private $sortdrawprice;
+
+
+}

@@ -1,0 +1,53 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Countries
+ *
+ * @ORM\Table(name="countries")
+ * @ORM\Entity
+ */
+class Countries
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ccode", type="string", length=15, nullable=true)
+     */
+    private $ccode;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="country", type="string", length=30, nullable=true)
+     */
+    private $country;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="last_verified", type="string", length=30, nullable=true)
+     */
+    private $lastVerified;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="alias", type="string", length=30, nullable=true)
+     */
+    private $alias;
+
+
+}

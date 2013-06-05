@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Tipexbfmap" table="tipexbfmap">
+    <id name="bfmarketid" type="integer" column="bfmarketid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="matchid" type="integer" column="matchid" nullable="true"/>
+    <field name="ot" type="integer" column="ot" nullable="true"/>
+    <field name="lastUpdated" type="datetime" column="last_updated" nullable="true"/>
+    <field name="spid" type="integer" column="spid" nullable="true"/>
+    <field name="line" type="string" column="line" length="30" nullable="true"/>
+  </entity>
+</doctrine-mapping>

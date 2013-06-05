@@ -1,0 +1,39 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DuplicateMatches
+ *
+ * @ORM\Table(name="duplicate_matches")
+ * @ORM\Entity
+ */
+class DuplicateMatches
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $matchid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="xsid", type="integer", nullable=true)
+     */
+    private $xsid;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="time_logged", type="datetime", nullable=false)
+     */
+    private $timeLogged;
+
+
+}

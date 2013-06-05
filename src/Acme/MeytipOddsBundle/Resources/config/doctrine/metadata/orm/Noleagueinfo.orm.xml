@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Noleagueinfo" table="noleagueinfo">
+    <id name="codeid" type="integer" column="codeid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="lid" type="integer" column="lid" nullable="true"/>
+    <field name="country" type="string" column="country" length="20" nullable="true"/>
+    <field name="subleague" type="string" column="subleague" length="50" nullable="true"/>
+    <field name="league" type="string" column="league" length="50" nullable="true"/>
+    <field name="uniqueid" type="string" column="uniqueid" length="30" nullable="true"/>
+    <field name="whenFound" type="datetime" column="when_found" nullable="true"/>
+  </entity>
+</doctrine-mapping>

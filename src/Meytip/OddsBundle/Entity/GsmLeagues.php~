@@ -1,0 +1,102 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * GsmLeagues
+ *
+ * @ORM\Table(name="gsm_leagues")
+ * @ORM\Entity
+ */
+class GsmLeagues
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="unique", type="string", length=30, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $unique;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="leagueid", type="integer", nullable=true)
+     */
+    private $leagueid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="area_name", type="string", length=50, nullable=true)
+     */
+    private $areaName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_comp_id", type="integer", nullable=true)
+     */
+    private $gsmCompId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_comp_name", type="string", length=50, nullable=true)
+     */
+    private $gsmCompName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_round_id", type="integer", nullable=true)
+     */
+    private $gsmRoundId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_round_name", type="string", length=50, nullable=true)
+     */
+    private $gsmRoundName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_group_id", type="integer", nullable=true)
+     */
+    private $gsmGroupId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_group_name", type="string", length=50, nullable=true)
+     */
+    private $gsmGroupName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_season_id", type="integer", nullable=true)
+     */
+    private $gsmSeasonId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_season_name", type="string", length=50, nullable=true)
+     */
+    private $gsmSeasonName;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="timelogged", type="datetime", nullable=true)
+     */
+    private $timelogged;
+
+
+}

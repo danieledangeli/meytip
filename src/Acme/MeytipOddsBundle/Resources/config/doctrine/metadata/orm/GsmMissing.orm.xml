@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="GsmMissing" table="gsm_missing">
+    <id name="gsmid" type="integer" column="gsmid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="gsmCompId" type="integer" column="gsm_comp_id" nullable="true"/>
+    <field name="gsmCompName" type="string" column="gsm_comp_name" length="50" nullable="true"/>
+    <field name="gsmRoundId" type="integer" column="gsm_round_id" nullable="true"/>
+    <field name="gsmRoundName" type="string" column="gsm_round_name" length="50" nullable="true"/>
+    <field name="gsmGroupId" type="integer" column="gsm_group_id" nullable="true"/>
+    <field name="gsmGroupName" type="string" column="gsm_group_name" length="50" nullable="true"/>
+    <field name="gsmSeasonId" type="integer" column="gsm_season_id" nullable="true"/>
+    <field name="gsmSeasonName" type="string" column="gsm_season_name" length="50" nullable="true"/>
+    <field name="timelogged" type="datetime" column="timelogged" nullable="false"/>
+    <field name="homeTeamId" type="integer" column="home_team_id" nullable="true"/>
+    <field name="awayTeamId" type="integer" column="away_team_id" nullable="true"/>
+    <field name="homeTeamName" type="string" column="home_team_name" length="50" nullable="true"/>
+    <field name="awayTeamName" type="string" column="away_team_name" length="50" nullable="true"/>
+    <field name="areaName" type="string" column="area_name" length="50" nullable="true"/>
+    <field name="startDate" type="date" column="start_date" nullable="true"/>
+    <field name="startTime" type="time" column="start_time" nullable="true"/>
+  </entity>
+</doctrine-mapping>

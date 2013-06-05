@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Corrections" table="corrections">
+    <id name="index" type="integer" column="index">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="matchid" type="integer" column="matchid" nullable="false"/>
+    <field name="xsid" type="integer" column="xsid" nullable="false"/>
+    <field name="lastUpdated" type="datetime" column="last_updated" nullable="false"/>
+    <field name="lastHscore" type="integer" column="last_hscore" nullable="true"/>
+    <field name="lastAscore" type="integer" column="last_ascore" nullable="true"/>
+    <field name="hscore" type="integer" column="hscore" nullable="true"/>
+    <field name="ascore" type="integer" column="ascore" nullable="true"/>
+    <field name="matchstatus" type="string" column="matchstatus" length="30" nullable="true"/>
+    <field name="type" type="string" column="type" length="30" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DuplicateMatches" table="duplicate_matches">
+    <id name="matchid" type="integer" column="matchid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="xsid" type="integer" column="xsid" nullable="true"/>
+    <field name="timeLogged" type="datetime" column="time_logged" nullable="false"/>
+  </entity>
+</doctrine-mapping>

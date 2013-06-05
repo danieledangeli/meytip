@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Books" table="books">
+    <id name="bid" type="integer" column="bid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="brokername" type="string" column="brokername" length="50" nullable="true"/>
+    <field name="affiliateLink" type="string" column="affiliate_link" length="999" nullable="true"/>
+  </entity>
+</doctrine-mapping>

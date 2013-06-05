@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="GsmMatchinfo" table="gsm_matchinfo">
+    <id name="matchid" type="integer" column="matchid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="gsmid" type="integer" column="gsmid" nullable="true"/>
+    <field name="venueId" type="integer" column="venue_id" nullable="true"/>
+    <field name="name" type="string" column="name" length="100" nullable="true"/>
+    <field name="city" type="string" column="city" length="100" nullable="true"/>
+    <field name="areaId" type="integer" column="area_id" nullable="true"/>
+    <field name="refereeId" type="integer" column="referee_id" nullable="true"/>
+    <field name="refereeName" type="string" column="referee_name" length="50" nullable="true"/>
+    <field name="attendance" type="integer" column="attendance" nullable="true"/>
+  </entity>
+</doctrine-mapping>

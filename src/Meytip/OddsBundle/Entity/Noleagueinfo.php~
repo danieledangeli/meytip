@@ -1,0 +1,67 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Noleagueinfo
+ *
+ * @ORM\Table(name="noleagueinfo")
+ * @ORM\Entity
+ */
+class Noleagueinfo
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="codeid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $codeid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="lid", type="integer", nullable=true)
+     */
+    private $lid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="country", type="string", length=20, nullable=true)
+     */
+    private $country;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="subleague", type="string", length=50, nullable=true)
+     */
+    private $subleague;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="league", type="string", length=50, nullable=true)
+     */
+    private $league;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="uniqueid", type="string", length=30, nullable=true)
+     */
+    private $uniqueid;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="when_found", type="datetime", nullable=true)
+     */
+    private $whenFound;
+
+
+}

@@ -1,0 +1,53 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * StartingTimes
+ *
+ * @ORM\Table(name="starting_times")
+ * @ORM\Entity
+ */
+class StartingTimes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $matchid;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="starttime", type="datetime", nullable=true)
+     */
+    private $starttime;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=5, nullable=true)
+     */
+    private $type;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="median_time", type="datetime", nullable=true)
+     */
+    private $medianTime;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="no_of_times", type="integer", nullable=true)
+     */
+    private $noOfTimes;
+
+
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="StartingTimes" table="starting_times">
+    <id name="matchid" type="integer" column="matchid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="starttime" type="datetime" column="starttime" nullable="true"/>
+    <field name="type" type="string" column="type" length="5" nullable="true"/>
+    <field name="medianTime" type="datetime" column="median_time" nullable="true"/>
+    <field name="noOfTimes" type="integer" column="no_of_times" nullable="true"/>
+  </entity>
+</doctrine-mapping>

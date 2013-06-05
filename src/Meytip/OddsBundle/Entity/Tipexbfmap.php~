@@ -1,0 +1,60 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tipexbfmap
+ *
+ * @ORM\Table(name="tipexbfmap")
+ * @ORM\Entity
+ */
+class Tipexbfmap
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="bfmarketid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $bfmarketid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=true)
+     */
+    private $matchid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ot", type="integer", nullable=true)
+     */
+    private $ot;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=true)
+     */
+    private $lastUpdated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="spid", type="integer", nullable=true)
+     */
+    private $spid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="line", type="string", length=30, nullable=true)
+     */
+    private $line;
+
+
+}

@@ -1,0 +1,74 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OutrightMastermkts
+ *
+ * @ORM\Table(name="outright_mastermkts")
+ * @ORM\Entity
+ */
+class OutrightMastermkts
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="groupid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $groupid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="marketname", type="string", length=50, nullable=true)
+     */
+    private $marketname;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="typeid", type="integer", nullable=true)
+     */
+    private $typeid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="status", type="integer", nullable=true)
+     */
+    private $status;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="subscribe", type="string", length=1, nullable=true)
+     */
+    private $subscribe;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ccid", type="integer", nullable=true)
+     */
+    private $ccid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="country", type="string", length=30, nullable=true)
+     */
+    private $country;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sportid", type="integer", nullable=true)
+     */
+    private $sportid;
+
+
+}

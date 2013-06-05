@@ -1,0 +1,81 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Stdodds
+ *
+ * @ORM\Table(name="stdodds")
+ * @ORM\Entity
+ */
+class Stdodds
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="offer_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $offerId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="hcapgroup", type="string", length=20, nullable=true)
+     */
+    private $hcapgroup;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="o1", type="float", nullable=true)
+     */
+    private $o1;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="o2", type="float", nullable=true)
+     */
+    private $o2;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="o3", type="float", nullable=true)
+     */
+    private $o3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="o1dir", type="string", length=1, nullable=true)
+     */
+    private $o1dir;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="o2dir", type="string", length=1, nullable=true)
+     */
+    private $o2dir;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="o3dir", type="string", length=1, nullable=true)
+     */
+    private $o3dir;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_change", type="datetime", nullable=true)
+     */
+    private $lastChange;
+
+
+}

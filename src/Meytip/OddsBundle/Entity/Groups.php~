@@ -1,0 +1,60 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Groups
+ *
+ * @ORM\Table(name="groups")
+ * @ORM\Entity
+ */
+class Groups
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="code", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $code;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="group", type="string", length=8, nullable=true)
+     */
+    private $group;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=50, nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sport", type="string", length=15, nullable=true)
+     */
+    private $sport;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="verified", type="datetime", nullable=true)
+     */
+    private $verified;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sportid", type="integer", nullable=false)
+     */
+    private $sportid;
+
+
+}

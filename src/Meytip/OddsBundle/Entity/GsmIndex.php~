@@ -1,0 +1,95 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * GsmIndex
+ *
+ * @ORM\Table(name="gsm_index")
+ * @ORM\Entity
+ */
+class GsmIndex
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="unique_id", type="string", length=30, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $uniqueId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="event_id", type="integer", nullable=true)
+     */
+    private $eventId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="competition_id", type="integer", nullable=true)
+     */
+    private $competitionId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=50, nullable=true)
+     */
+    private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sport", type="string", length=50, nullable=true)
+     */
+    private $sport;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=100, nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=false)
+     */
+    private $lastUpdated;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="params", type="string", length=100, nullable=true)
+     */
+    private $params;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="gsm_lu", type="datetime", nullable=true)
+     */
+    private $gsmLu;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="gsm_file", type="string", length=255, nullable=true)
+     */
+    private $gsmFile;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_processed", type="datetime", nullable=true)
+     */
+    private $lastProcessed;
+
+
+}

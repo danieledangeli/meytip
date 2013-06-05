@@ -1,0 +1,95 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Scriptmon
+ *
+ * @ORM\Table(name="scriptmon")
+ * @ORM\Entity
+ */
+class Scriptmon
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="scriptid", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $scriptid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sport", type="string", length=10, nullable=true)
+     */
+    private $sport;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="oddstype", type="string", length=20, nullable=true)
+     */
+    private $oddstype;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=100, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_run", type="datetime", nullable=true)
+     */
+    private $lastRun;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_ended", type="datetime", nullable=true)
+     */
+    private $lastEnded;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="desc", type="string", length=100, nullable=true)
+     */
+    private $desc;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fullrefresh", type="datetime", nullable=true)
+     */
+    private $fullrefresh;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="refresh", type="string", length=20, nullable=true)
+     */
+    private $refresh;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="runat", type="time", nullable=true)
+     */
+    private $runat;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=20, nullable=true)
+     */
+    private $type;
+
+
+}

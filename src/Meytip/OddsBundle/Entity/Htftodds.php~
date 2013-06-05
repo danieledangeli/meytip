@@ -1,0 +1,71 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Htftodds
+ *
+ * @ORM\Table(name="htftodds")
+ * @ORM\Entity
+ */
+class Htftodds
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="bid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $bid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $matchid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="outcome", type="string", length=15, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $outcome;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="o1", type="float", nullable=true)
+     */
+    private $o1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="o1dir", type="string", length=1, nullable=true)
+     */
+    private $o1dir;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_change", type="datetime", nullable=false)
+     */
+    private $lastChange;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bmoid", type="string", length=50, nullable=true)
+     */
+    private $bmoid;
+
+
+}

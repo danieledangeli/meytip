@@ -1,0 +1,39 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Sports
+ *
+ * @ORM\Table(name="sports")
+ * @ORM\Entity
+ */
+class Sports
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sportid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $sportid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=30, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_verified", type="datetime", nullable=true)
+     */
+    private $lastVerified;
+
+
+}

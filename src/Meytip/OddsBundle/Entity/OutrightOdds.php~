@@ -1,0 +1,67 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OutrightOdds
+ *
+ * @ORM\Table(name="outright_odds")
+ * @ORM\Entity
+ */
+class OutrightOdds
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="uniqueid", type="string", length=15, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $uniqueid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="bid", type="integer", nullable=true)
+     */
+    private $bid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="compname", type="string", length=30, nullable=true)
+     */
+    private $compname;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="compid", type="integer", nullable=true)
+     */
+    private $compid;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="o1", type="float", nullable=true)
+     */
+    private $o1;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="marketid", type="integer", nullable=true)
+     */
+    private $marketid;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=true)
+     */
+    private $lastUpdated;
+
+
+}

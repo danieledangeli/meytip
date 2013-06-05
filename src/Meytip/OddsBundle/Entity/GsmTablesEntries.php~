@@ -1,0 +1,123 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * GsmTablesEntries
+ *
+ * @ORM\Table(name="gsm_tables_entries")
+ * @ORM\Entity
+ */
+class GsmTablesEntries
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="unique", type="string", length=30, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $unique;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="table_id", type="integer", nullable=true)
+     */
+    private $tableId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rank", type="integer", nullable=true)
+     */
+    private $rank;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rank_last", type="integer", nullable=true)
+     */
+    private $rankLast;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="rank_total", type="integer", nullable=true)
+     */
+    private $rankTotal;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=100, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_team_id", type="integer", nullable=true)
+     */
+    private $gsmTeamId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="played", type="integer", nullable=true)
+     */
+    private $played;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="won", type="integer", nullable=true)
+     */
+    private $won;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="lost", type="integer", nullable=true)
+     */
+    private $lost;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="drawn", type="integer", nullable=true)
+     */
+    private $drawn;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="for", type="integer", nullable=true)
+     */
+    private $for;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="against", type="integer", nullable=true)
+     */
+    private $against;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="points", type="integer", nullable=true)
+     */
+    private $points;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=true)
+     */
+    private $lastUpdated;
+
+
+}

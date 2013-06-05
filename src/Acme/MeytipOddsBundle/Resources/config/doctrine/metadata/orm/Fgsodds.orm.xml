@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Fgsodds" table="fgsodds">
+    <id name="bid" type="integer" column="bid"/>
+    <id name="matchid" type="integer" column="matchid"/>
+    <id name="outcome" type="string" column="outcome" length="15"/>
+    <field name="o1" type="float" column="o1" nullable="true"/>
+    <field name="o1dir" type="string" column="o1dir" length="1" nullable="true"/>
+    <field name="lastChange" type="datetime" column="last_change" nullable="false"/>
+    <field name="bmoid" type="string" column="bmoid" length="50" nullable="true"/>
+  </entity>
+</doctrine-mapping>

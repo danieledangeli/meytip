@@ -1,0 +1,39 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Books
+ *
+ * @ORM\Table(name="books")
+ * @ORM\Entity
+ */
+class Books
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="bid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $bid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="brokername", type="string", length=50, nullable=true)
+     */
+    private $brokername;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="affiliate_link", type="string", length=999, nullable=true)
+     */
+    private $affiliateLink;
+
+
+}

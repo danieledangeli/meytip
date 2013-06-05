@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Results" table="results">
+    <id name="matchid" type="integer" column="matchid"/>
+    <id name="resultsid" type="integer" column="resultsid"/>
+    <field name="timelogged" type="datetime" column="timelogged" nullable="true"/>
+    <field name="hscore" type="integer" column="hscore" nullable="true"/>
+    <field name="ascore" type="integer" column="ascore" nullable="true"/>
+    <field name="name" type="string" column="name" length="30" nullable="true"/>
+    <field name="homeid" type="integer" column="homeid" nullable="true"/>
+    <field name="awayid" type="integer" column="awayid" nullable="true"/>
+  </entity>
+</doctrine-mapping>

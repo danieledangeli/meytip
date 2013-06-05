@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Scriptmon" table="scriptmon">
+    <id name="scriptid" type="string" column="scriptid" length="20">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="sport" type="string" column="sport" length="10" nullable="true"/>
+    <field name="oddstype" type="string" column="oddstype" length="20" nullable="true"/>
+    <field name="name" type="string" column="name" length="100" nullable="true"/>
+    <field name="lastRun" type="datetime" column="last_run" nullable="true"/>
+    <field name="lastEnded" type="datetime" column="last_ended" nullable="true"/>
+    <field name="desc" type="string" column="desc" length="100" nullable="true"/>
+    <field name="fullrefresh" type="datetime" column="fullrefresh" nullable="true"/>
+    <field name="refresh" type="string" column="refresh" length="20" nullable="true"/>
+    <field name="runat" type="time" column="runat" nullable="true"/>
+    <field name="type" type="string" column="type" length="20" nullable="true"/>
+  </entity>
+</doctrine-mapping>

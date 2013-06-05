@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="GsmTablesEntries" table="gsm_tables_entries">
+    <id name="unique" type="string" column="unique" length="30">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="tableId" type="integer" column="table_id" nullable="true"/>
+    <field name="rank" type="integer" column="rank" nullable="true"/>
+    <field name="rankLast" type="integer" column="rank_last" nullable="true"/>
+    <field name="rankTotal" type="integer" column="rank_total" nullable="true"/>
+    <field name="name" type="string" column="name" length="100" nullable="true"/>
+    <field name="gsmTeamId" type="integer" column="gsm_team_id" nullable="true"/>
+    <field name="played" type="integer" column="played" nullable="true"/>
+    <field name="won" type="integer" column="won" nullable="true"/>
+    <field name="lost" type="integer" column="lost" nullable="true"/>
+    <field name="drawn" type="integer" column="drawn" nullable="true"/>
+    <field name="for" type="integer" column="for" nullable="true"/>
+    <field name="against" type="integer" column="against" nullable="true"/>
+    <field name="points" type="integer" column="points" nullable="true"/>
+    <field name="lastUpdated" type="datetime" column="last_updated" nullable="true"/>
+  </entity>
+</doctrine-mapping>

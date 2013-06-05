@@ -1,0 +1,74 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * StdoddsMoves
+ *
+ * @ORM\Table(name="stdodds_moves")
+ * @ORM\Entity
+ */
+class StdoddsMoves
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="offer_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $offerId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="bid", type="integer", nullable=true)
+     */
+    private $bid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="hcapgroup", type="string", length=20, nullable=true)
+     */
+    private $hcapgroup;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=false)
+     */
+    private $lastUpdated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sportid", type="integer", nullable=true)
+     */
+    private $sportid;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="o1", type="float", nullable=true)
+     */
+    private $o1;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="o2", type="float", nullable=true)
+     */
+    private $o2;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="o3", type="float", nullable=true)
+     */
+    private $o3;
+
+
+}

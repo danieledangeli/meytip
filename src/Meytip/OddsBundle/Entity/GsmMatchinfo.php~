@@ -1,0 +1,81 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * GsmMatchinfo
+ *
+ * @ORM\Table(name="gsm_matchinfo")
+ * @ORM\Entity
+ */
+class GsmMatchinfo
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $matchid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsmid", type="integer", nullable=true)
+     */
+    private $gsmid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="venue_id", type="integer", nullable=true)
+     */
+    private $venueId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=100, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="city", type="string", length=100, nullable=true)
+     */
+    private $city;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="area_id", type="integer", nullable=true)
+     */
+    private $areaId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="referee_id", type="integer", nullable=true)
+     */
+    private $refereeId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="referee_name", type="string", length=50, nullable=true)
+     */
+    private $refereeName;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="attendance", type="integer", nullable=true)
+     */
+    private $attendance;
+
+
+}

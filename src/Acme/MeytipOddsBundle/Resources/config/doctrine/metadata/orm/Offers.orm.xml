@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Offers" table="offers">
+    <id name="offerId" type="integer" column="offer_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="bid" type="integer" column="bid" nullable="false"/>
+    <field name="active" type="boolean" column="active" nullable="true"/>
+    <field name="lastUpdated" type="datetime" column="last_updated" nullable="true"/>
+    <field name="sportid" type="integer" column="sportid" nullable="false"/>
+    <field name="matchid" type="integer" column="matchid" nullable="false"/>
+    <field name="lastChange" type="datetime" column="last_change" nullable="false"/>
+    <field name="ot" type="integer" column="ot" nullable="false"/>
+    <field name="bmoid" type="string" column="bmoid" length="30" nullable="true"/>
+    <field name="startingTime" type="datetime" column="starting_time" nullable="true"/>
+  </entity>
+</doctrine-mapping>

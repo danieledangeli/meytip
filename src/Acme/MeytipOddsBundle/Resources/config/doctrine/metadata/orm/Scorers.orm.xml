@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Scorers" table="scorers">
+    <id name="uniqueid" type="string" column="uniqueid" length="15">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="matchid" type="integer" column="matchid" nullable="false"/>
+    <field name="name" type="string" column="name" length="20" nullable="true"/>
+    <field name="period" type="integer" column="period" nullable="true"/>
+    <field name="teamid" type="integer" column="teamid" nullable="false"/>
+    <field name="scoretime" type="integer" column="scoretime" nullable="false"/>
+    <field name="scoretype" type="string" column="scoretype" length="20" nullable="true"/>
+    <field name="timelogged" type="datetime" column="timelogged" nullable="true"/>
+  </entity>
+</doctrine-mapping>

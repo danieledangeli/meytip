@@ -1,0 +1,88 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Corrections
+ *
+ * @ORM\Table(name="corrections")
+ * @ORM\Entity
+ */
+class Corrections
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="index", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $index;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=false)
+     */
+    private $matchid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="xsid", type="integer", nullable=false)
+     */
+    private $xsid;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=false)
+     */
+    private $lastUpdated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="last_hscore", type="integer", nullable=true)
+     */
+    private $lastHscore;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="last_ascore", type="integer", nullable=true)
+     */
+    private $lastAscore;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="hscore", type="integer", nullable=true)
+     */
+    private $hscore;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ascore", type="integer", nullable=true)
+     */
+    private $ascore;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="matchstatus", type="string", length=30, nullable=true)
+     */
+    private $matchstatus;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=30, nullable=true)
+     */
+    private $type;
+
+
+}

@@ -1,0 +1,109 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * GsmEvents
+ *
+ * @ORM\Table(name="gsm_events")
+ * @ORM\Entity
+ */
+class GsmEvents
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="eventid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $eventid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="event_type", type="string", length=30, nullable=true)
+     */
+    private $eventType;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="matchid", type="integer", nullable=true)
+     */
+    private $matchid;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsmid", type="integer", nullable=true)
+     */
+    private $gsmid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="code", type="string", length=30, nullable=true)
+     */
+    private $code;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=50, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="person", type="string", length=100, nullable=true)
+     */
+    private $person;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="person_id", type="integer", nullable=true)
+     */
+    private $personId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="team_id", type="integer", nullable=true)
+     */
+    private $teamId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="gsm_team_id", type="integer", nullable=true)
+     */
+    private $gsmTeamId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="minute", type="integer", nullable=true)
+     */
+    private $minute;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="minute_extra", type="integer", nullable=true)
+     */
+    private $minuteExtra;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=true)
+     */
+    private $lastUpdated;
+
+
+}

@@ -1,0 +1,102 @@
+<?php
+
+namespace Meytip\OddsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Leagues
+ *
+ * @ORM\Table(name="leagues")
+ * @ORM\Entity
+ */
+class Leagues
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="code", type="integer", nullable=false)
+     */
+    private $code;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="group", type="string", length=8, nullable=false)
+     */
+    private $group;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=50, nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="year", type="integer", nullable=true)
+     */
+    private $year;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sport", type="string", length=15, nullable=true)
+     */
+    private $sport;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description_fr", type="string", length=50, nullable=true)
+     */
+    private $descriptionFr;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="verified", type="datetime", nullable=true)
+     */
+    private $verified;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="startdate", type="datetime", nullable=true)
+     */
+    private $startdate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="enddate", type="datetime", nullable=true)
+     */
+    private $enddate;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="display_order", type="integer", nullable=true)
+     */
+    private $displayOrder;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="sportid", type="integer", nullable=false)
+     */
+    private $sportid;
+
+
+}
