@@ -36,4 +36,60 @@ class Books
     private $affiliateLink;
 
 
+
+    /**
+     * Get bid
+     *
+     * @return integer 
+     */
+    public function getBid()
+    {
+        return $this->bid;
+    }
+
+    /**
+     * Set brokername
+     *
+     * @param string $brokername
+     * @return Books
+     */
+    public function setBrokername($brokername)
+    {
+        $this->brokername = $brokername;
+    
+        return $this;
+    }
+
+    /**
+     * Get brokername
+     *
+     * @return string 
+     */
+    public function getBrokername()
+    {
+        return $this->brokername;
+    }
+
+    /**
+     * Set affiliateLink
+     *
+     * @param string $affiliateLink
+     * @return Books
+     */
+    public function setAffiliateLink($affiliateLink)
+    {
+        $this->affiliateLink = $affiliateLink;
+    
+        return $this;
+    }
+
+    /**
+     * Get affiliateLink
+     *
+     * @return string 
+     */
+    public function getAffiliateLink()
+    {
+        return $this->affiliateLink;
+    }
 }

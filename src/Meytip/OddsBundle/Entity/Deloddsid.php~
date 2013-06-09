@@ -29,4 +29,37 @@ class Deloddsid
     private $time;
 
 
+
+    /**
+     * Get oddsid
+     *
+     * @return integer 
+     */
+    public function getOddsid()
+    {
+        return $this->oddsid;
+    }
+
+    /**
+     * Set time
+     *
+     * @param \DateTime $time
+     * @return Deloddsid
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+    
+        return $this;
+    }
+
+    /**
+     * Get time
+     *
+     * @return \DateTime 
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
 }

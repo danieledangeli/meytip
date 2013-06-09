@@ -1,0 +1,7 @@
+parameters:
+#    meytip_innlab.example.class: Meytip\InnlabBundle\Example
+
+services:
+#    meytip_innlab.example:
+#        class: %meytip_innlab.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

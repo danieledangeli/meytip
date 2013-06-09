@@ -1,0 +1,13 @@
+quotes:
+    type:     rest
+    resource: Meytip\InnlabBundle\Controller\QuotesController
+bets:
+    type:     rest
+    resource: Meytip\InnlabBundle\Controller\BetController
+feed:
+    type: rest
+    resource: Meytip\InnlabBundle\Controller\FeedController
+user:
+    type: rest
+    resource: Meytip\InnlabBundle\Controller\UserController
+

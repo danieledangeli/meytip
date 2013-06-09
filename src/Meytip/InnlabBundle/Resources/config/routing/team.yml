@@ -1,0 +1,30 @@
+team:
+    pattern:  /
+    defaults: { _controller: "MeytipInnlabBundle:Team:index" }
+
+team_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MeytipInnlabBundle:Team:show" }
+
+team_new:
+    pattern:  /new
+    defaults: { _controller: "MeytipInnlabBundle:Team:new" }
+
+team_create:
+    pattern:  /create
+    defaults: { _controller: "MeytipInnlabBundle:Team:create" }
+    requirements: { _method: post }
+
+team_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MeytipInnlabBundle:Team:edit" }
+
+team_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MeytipInnlabBundle:Team:update" }
+    requirements: { _method: post|put }
+
+team_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MeytipInnlabBundle:Team:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,7 @@
+parameters:
+#    meytip_pendingbet.example.class: Meytip\PendingbetBundle\Example
+
+services:
+#    meytip_pendingbet.example:
+#        class: %meytip_pendingbet.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

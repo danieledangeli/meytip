@@ -169,4 +169,497 @@ class Matches
     private $serviceLevel;
 
 
+
+    /**
+     * Get matchid
+     *
+     * @return integer 
+     */
+    public function getMatchid()
+    {
+        return $this->matchid;
+    }
+
+    /**
+     * Set matchname
+     *
+     * @param string $matchname
+     * @return Matches
+     */
+    public function setMatchname($matchname)
+    {
+        $this->matchname = $matchname;
+    
+        return $this;
+    }
+
+    /**
+     * Get matchname
+     *
+     * @return string 
+     */
+    public function getMatchname()
+    {
+        return $this->matchname;
+    }
+
+    /**
+     * Set eventname
+     *
+     * @param string $eventname
+     * @return Matches
+     */
+    public function setEventname($eventname)
+    {
+        $this->eventname = $eventname;
+    
+        return $this;
+    }
+
+    /**
+     * Get eventname
+     *
+     * @return string 
+     */
+    public function getEventname()
+    {
+        return $this->eventname;
+    }
+
+    /**
+     * Set starttime
+     *
+     * @param \DateTime $starttime
+     * @return Matches
+     */
+    public function setStarttime($starttime)
+    {
+        $this->starttime = $starttime;
+    
+        return $this;
+    }
+
+    /**
+     * Get starttime
+     *
+     * @return \DateTime 
+     */
+    public function getStarttime()
+    {
+        return $this->starttime;
+    }
+
+    /**
+     * Set timelogged
+     *
+     * @param \DateTime $timelogged
+     * @return Matches
+     */
+    public function setTimelogged($timelogged)
+    {
+        $this->timelogged = $timelogged;
+    
+        return $this;
+    }
+
+    /**
+     * Get timelogged
+     *
+     * @return \DateTime 
+     */
+    public function getTimelogged()
+    {
+        return $this->timelogged;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     * @return Matches
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set league
+     *
+     * @param string $league
+     * @return Matches
+     */
+    public function setLeague($league)
+    {
+        $this->league = $league;
+    
+        return $this;
+    }
+
+    /**
+     * Get league
+     *
+     * @return string 
+     */
+    public function getLeague()
+    {
+        return $this->league;
+    }
+
+    /**
+     * Set groupid
+     *
+     * @param integer $groupid
+     * @return Matches
+     */
+    public function setGroupid($groupid)
+    {
+        $this->groupid = $groupid;
+    
+        return $this;
+    }
+
+    /**
+     * Get groupid
+     *
+     * @return integer 
+     */
+    public function getGroupid()
+    {
+        return $this->groupid;
+    }
+
+    /**
+     * Set leagueid
+     *
+     * @param integer $leagueid
+     * @return Matches
+     */
+    public function setLeagueid($leagueid)
+    {
+        $this->leagueid = $leagueid;
+    
+        return $this;
+    }
+
+    /**
+     * Get leagueid
+     *
+     * @return integer 
+     */
+    public function getLeagueid()
+    {
+        return $this->leagueid;
+    }
+
+    /**
+     * Set xsid
+     *
+     * @param integer $xsid
+     * @return Matches
+     */
+    public function setXsid($xsid)
+    {
+        $this->xsid = $xsid;
+    
+        return $this;
+    }
+
+    /**
+     * Get xsid
+     *
+     * @return integer 
+     */
+    public function getXsid()
+    {
+        return $this->xsid;
+    }
+
+    /**
+     * Set matchstatus
+     *
+     * @param string $matchstatus
+     * @return Matches
+     */
+    public function setMatchstatus($matchstatus)
+    {
+        $this->matchstatus = $matchstatus;
+    
+        return $this;
+    }
+
+    /**
+     * Get matchstatus
+     *
+     * @return string 
+     */
+    public function getMatchstatus()
+    {
+        return $this->matchstatus;
+    }
+
+    /**
+     * Set hscore
+     *
+     * @param integer $hscore
+     * @return Matches
+     */
+    public function setHscore($hscore)
+    {
+        $this->hscore = $hscore;
+    
+        return $this;
+    }
+
+    /**
+     * Get hscore
+     *
+     * @return integer 
+     */
+    public function getHscore()
+    {
+        return $this->hscore;
+    }
+
+    /**
+     * Set ascore
+     *
+     * @param integer $ascore
+     * @return Matches
+     */
+    public function setAscore($ascore)
+    {
+        $this->ascore = $ascore;
+    
+        return $this;
+    }
+
+    /**
+     * Get ascore
+     *
+     * @return integer 
+     */
+    public function getAscore()
+    {
+        return $this->ascore;
+    }
+
+    /**
+     * Set sportid
+     *
+     * @param integer $sportid
+     * @return Matches
+     */
+    public function setSportid($sportid)
+    {
+        $this->sportid = $sportid;
+    
+        return $this;
+    }
+
+    /**
+     * Get sportid
+     *
+     * @return integer 
+     */
+    public function getSportid()
+    {
+        return $this->sportid;
+    }
+
+    /**
+     * Set hteamid
+     *
+     * @param integer $hteamid
+     * @return Matches
+     */
+    public function setHteamid($hteamid)
+    {
+        $this->hteamid = $hteamid;
+    
+        return $this;
+    }
+
+    /**
+     * Get hteamid
+     *
+     * @return integer 
+     */
+    public function getHteamid()
+    {
+        return $this->hteamid;
+    }
+
+    /**
+     * Set ateamid
+     *
+     * @param integer $ateamid
+     * @return Matches
+     */
+    public function setAteamid($ateamid)
+    {
+        $this->ateamid = $ateamid;
+    
+        return $this;
+    }
+
+    /**
+     * Get ateamid
+     *
+     * @return integer 
+     */
+    public function getAteamid()
+    {
+        return $this->ateamid;
+    }
+
+    /**
+     * Set ccid
+     *
+     * @param integer $ccid
+     * @return Matches
+     */
+    public function setCcid($ccid)
+    {
+        $this->ccid = $ccid;
+    
+        return $this;
+    }
+
+    /**
+     * Get ccid
+     *
+     * @return integer 
+     */
+    public function getCcid()
+    {
+        return $this->ccid;
+    }
+
+    /**
+     * Set gsmid
+     *
+     * @param integer $gsmid
+     * @return Matches
+     */
+    public function setGsmid($gsmid)
+    {
+        $this->gsmid = $gsmid;
+    
+        return $this;
+    }
+
+    /**
+     * Get gsmid
+     *
+     * @return integer 
+     */
+    public function getGsmid()
+    {
+        return $this->gsmid;
+    }
+
+    /**
+     * Set scoresUpdated
+     *
+     * @param \DateTime $scoresUpdated
+     * @return Matches
+     */
+    public function setScoresUpdated($scoresUpdated)
+    {
+        $this->scoresUpdated = $scoresUpdated;
+    
+        return $this;
+    }
+
+    /**
+     * Get scoresUpdated
+     *
+     * @return \DateTime 
+     */
+    public function getScoresUpdated()
+    {
+        return $this->scoresUpdated;
+    }
+
+    /**
+     * Set matchTime
+     *
+     * @param string $matchTime
+     * @return Matches
+     */
+    public function setMatchTime($matchTime)
+    {
+        $this->matchTime = $matchTime;
+    
+        return $this;
+    }
+
+    /**
+     * Get matchTime
+     *
+     * @return string 
+     */
+    public function getMatchTime()
+    {
+        return $this->matchTime;
+    }
+
+    /**
+     * Set gsmlive
+     *
+     * @param string $gsmlive
+     * @return Matches
+     */
+    public function setGsmlive($gsmlive)
+    {
+        $this->gsmlive = $gsmlive;
+    
+        return $this;
+    }
+
+    /**
+     * Get gsmlive
+     *
+     * @return string 
+     */
+    public function getGsmlive()
+    {
+        return $this->gsmlive;
+    }
+
+    /**
+     * Set serviceLevel
+     *
+     * @param string $serviceLevel
+     * @return Matches
+     */
+    public function setServiceLevel($serviceLevel)
+    {
+        $this->serviceLevel = $serviceLevel;
+    
+        return $this;
+    }
+
+    /**
+     * Get serviceLevel
+     *
+     * @return string 
+     */
+    public function getServiceLevel()
+    {
+        return $this->serviceLevel;
+    }
 }

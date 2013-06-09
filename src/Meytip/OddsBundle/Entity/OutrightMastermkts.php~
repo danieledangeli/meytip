@@ -71,4 +71,175 @@ class OutrightMastermkts
     private $sportid;
 
 
+
+    /**
+     * Get groupid
+     *
+     * @return integer 
+     */
+    public function getGroupid()
+    {
+        return $this->groupid;
+    }
+
+    /**
+     * Set marketname
+     *
+     * @param string $marketname
+     * @return OutrightMastermkts
+     */
+    public function setMarketname($marketname)
+    {
+        $this->marketname = $marketname;
+    
+        return $this;
+    }
+
+    /**
+     * Get marketname
+     *
+     * @return string 
+     */
+    public function getMarketname()
+    {
+        return $this->marketname;
+    }
+
+    /**
+     * Set typeid
+     *
+     * @param integer $typeid
+     * @return OutrightMastermkts
+     */
+    public function setTypeid($typeid)
+    {
+        $this->typeid = $typeid;
+    
+        return $this;
+    }
+
+    /**
+     * Get typeid
+     *
+     * @return integer 
+     */
+    public function getTypeid()
+    {
+        return $this->typeid;
+    }
+
+    /**
+     * Set status
+     *
+     * @param integer $status
+     * @return OutrightMastermkts
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return integer 
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set subscribe
+     *
+     * @param string $subscribe
+     * @return OutrightMastermkts
+     */
+    public function setSubscribe($subscribe)
+    {
+        $this->subscribe = $subscribe;
+    
+        return $this;
+    }
+
+    /**
+     * Get subscribe
+     *
+     * @return string 
+     */
+    public function getSubscribe()
+    {
+        return $this->subscribe;
+    }
+
+    /**
+     * Set ccid
+     *
+     * @param integer $ccid
+     * @return OutrightMastermkts
+     */
+    public function setCcid($ccid)
+    {
+        $this->ccid = $ccid;
+    
+        return $this;
+    }
+
+    /**
+     * Get ccid
+     *
+     * @return integer 
+     */
+    public function getCcid()
+    {
+        return $this->ccid;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     * @return OutrightMastermkts
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set sportid
+     *
+     * @param integer $sportid
+     * @return OutrightMastermkts
+     */
+    public function setSportid($sportid)
+    {
+        $this->sportid = $sportid;
+    
+        return $this;
+    }
+
+    /**
+     * Get sportid
+     *
+     * @return integer 
+     */
+    public function getSportid()
+    {
+        return $this->sportid;
+    }
 }

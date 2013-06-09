@@ -17,6 +17,15 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Meytip\OddsBundle\MeytipOddsBundle(),
+            new Meytip\InnlabBundle\MeytipInnlabBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
+            new JMS\AopBundle\JMSAopBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
+            new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+
+            new Meytip\PendingbetBundle\MeytipPendingbetBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -64,4 +64,152 @@ class OutrightOdds
     private $lastUpdated;
 
 
+
+    /**
+     * Get uniqueid
+     *
+     * @return string 
+     */
+    public function getUniqueid()
+    {
+        return $this->uniqueid;
+    }
+
+    /**
+     * Set bid
+     *
+     * @param integer $bid
+     * @return OutrightOdds
+     */
+    public function setBid($bid)
+    {
+        $this->bid = $bid;
+    
+        return $this;
+    }
+
+    /**
+     * Get bid
+     *
+     * @return integer 
+     */
+    public function getBid()
+    {
+        return $this->bid;
+    }
+
+    /**
+     * Set compname
+     *
+     * @param string $compname
+     * @return OutrightOdds
+     */
+    public function setCompname($compname)
+    {
+        $this->compname = $compname;
+    
+        return $this;
+    }
+
+    /**
+     * Get compname
+     *
+     * @return string 
+     */
+    public function getCompname()
+    {
+        return $this->compname;
+    }
+
+    /**
+     * Set compid
+     *
+     * @param integer $compid
+     * @return OutrightOdds
+     */
+    public function setCompid($compid)
+    {
+        $this->compid = $compid;
+    
+        return $this;
+    }
+
+    /**
+     * Get compid
+     *
+     * @return integer 
+     */
+    public function getCompid()
+    {
+        return $this->compid;
+    }
+
+    /**
+     * Set o1
+     *
+     * @param float $o1
+     * @return OutrightOdds
+     */
+    public function setO1($o1)
+    {
+        $this->o1 = $o1;
+    
+        return $this;
+    }
+
+    /**
+     * Get o1
+     *
+     * @return float 
+     */
+    public function getO1()
+    {
+        return $this->o1;
+    }
+
+    /**
+     * Set marketid
+     *
+     * @param integer $marketid
+     * @return OutrightOdds
+     */
+    public function setMarketid($marketid)
+    {
+        $this->marketid = $marketid;
+    
+        return $this;
+    }
+
+    /**
+     * Get marketid
+     *
+     * @return integer 
+     */
+    public function getMarketid()
+    {
+        return $this->marketid;
+    }
+
+    /**
+     * Set lastUpdated
+     *
+     * @param \DateTime $lastUpdated
+     * @return OutrightOdds
+     */
+    public function setLastUpdated($lastUpdated)
+    {
+        $this->lastUpdated = $lastUpdated;
+    
+        return $this;
+    }
+
+    /**
+     * Get lastUpdated
+     *
+     * @return \DateTime 
+     */
+    public function getLastUpdated()
+    {
+        return $this->lastUpdated;
+    }
 }
