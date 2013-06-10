@@ -1,13 +1,17 @@
 quotes:
     type:     rest
     resource: Meytip\InnlabBundle\Controller\QuotesController
+    schemes:  [https]
 bets:
     type:     rest
     resource: Meytip\InnlabBundle\Controller\BetController
+    schemes:  [https]
 feed:
     type: rest
     resource: Meytip\InnlabBundle\Controller\FeedController
+    schemes:  [https]
 user:
     type: rest
     resource: Meytip\InnlabBundle\Controller\UserController
+    schemes:  [https]
 

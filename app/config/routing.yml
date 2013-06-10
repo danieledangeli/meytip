@@ -10,10 +10,12 @@ acme_hello:
 MeytipInnlabBundle_team:
         resource: "@MeytipInnlabBundle/Resources/config/routing/team.yml"
         prefix:   /team
+        schemes:  [https]
 
 MeytipInnlabBundle_quote:
         resource: "@MeytipInnlabBundle/Resources/config/routing/quote.yml"
         prefix:   /quote
+        schemes:  [https]
 
 #fos user bundle routing
 fos_user_security:
