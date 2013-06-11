@@ -63,6 +63,29 @@ class FeedController extends Controller
         
     } // "get_feeds"   [GET] /feeds
 
+
+    /**
+     * @Rest\View
+     */
+    public function getUserFeedsAction($fbid)
+    {
+
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $user = $dm->getRepository('MeytipInnlabBundle:User')->findOneBy(array('facebookid' => $fbid));
+
+        $sched = $user->getScheds();
+        $entities[] = $sched;
+
+        $view = View::create()->
+            setStatusCode(200)->
+            setFormat('json')->
+            //setSerializationContext($contest)->
+            setData($entities);
+        return $this->get('fos_rest.view_handler')->handle($view);
+
+
+    } // "get_feeds"   [GET] /feeds
+
     /**
      * @Rest\View
      */
