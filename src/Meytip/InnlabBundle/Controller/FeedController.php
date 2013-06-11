@@ -71,10 +71,38 @@ class FeedController extends Controller
     {
 
         $dm = $this->get('doctrine_mongodb')->getManager();
+        $em = $this->getDoctrine()->getManager();
         $user = $dm->getRepository('MeytipInnlabBundle:User')->findOneBy(array('facebookid' => $fbid));
 
-        $sched = $user->getScheds();
-        $entities[] = $sched;
+        $feeds = $user->getScheds();
+        $entities = array();
+        foreach($feeds as $f) {
+            $bets =  $f->getEventbets();
+
+            $data = array();
+            $data['feed'] = $f->getId();
+
+            //$data->feed = $f;
+            $quotes = array();
+            foreach($bets as $bet) {
+
+                $eventbet = array();
+                $event = $em->getRepository('MeytipInnlabBundle:Team')->find($bet->getEventid());
+
+                $eventbet['name'] = $event->getName();
+                $eventbet['quote'] = $event->getQuotes()[0];
+                $eventbet['eventid'] = $bet->getEventid();
+                $eventbet['odds'] = $bet->getOdds();
+                $eventbet['prono'] = $bet->getProno();
+
+                $quotes[] = $eventbet;
+
+
+            }
+            $data['quote'] = $quotes;
+
+            $entities[] = $data;
+        }
 
         $view = View::create()->
             setStatusCode(200)->
