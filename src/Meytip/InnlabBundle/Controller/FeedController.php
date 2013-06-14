@@ -31,6 +31,9 @@ class FeedController extends Controller
 
             $data = array();
             $data['feed'] = $f->getId();
+            $data['moltiplicatore'] = $f->getMoltiplicatore();
+            $data['amount'] = $f->getAmount();
+            $data['vincita'] = $f->getMoltiplicatore() * $f->getAmount();
 
             //$data->feed = $f;
             $quotes = array();
@@ -81,6 +84,10 @@ class FeedController extends Controller
 
             $data = array();
             $data['feed'] = $f->getId();
+            $data['moltiplicatore'] = $f->getMoltiplicatore();
+            $data['amount'] = $f->getAmount();
+            $data['vincita'] = $f->getMoltiplicatore() * $f->getAmount();
+
 
             //$data->feed = $f;
             $quotes = array();
@@ -142,6 +149,9 @@ class FeedController extends Controller
 
             $data = array();
             $data['feed'] = $f->getId();
+            $data['moltiplicatore'] = $f->getMoltiplicatore();
+            $data['amount'] = $f->getAmount();
+            $data['vincita'] = $f->getMoltiplicatore() * $f->getAmount();
             $data['fbid'] = $f->getUser()->getFacebookid();
             $data['name'] = $f->getUser()->getName();
             $format = new DateTimeToStringTransformer("F j, Y, g:i a");
