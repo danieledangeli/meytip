@@ -45,6 +45,7 @@ class Team {
      */
     protected $teewtidea;
 
+
     /**
      * @Exclude
      * @ORM\OneToMany(targetEntity="Quote", mappedBy="team")

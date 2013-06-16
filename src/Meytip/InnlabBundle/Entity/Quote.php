@@ -37,6 +37,11 @@ class Quote {
     protected $nofinal;
 
     /**
+     * @ORM\Column(type="string", length=240)
+     */
+    protected $esito;
+
+    /**
      *
      * @ORM\ManyToOne(targetEntity="Team", inversedBy="quotes")
      * @ORM\JoinColumn(name="team_id", referencedColumnName="id")

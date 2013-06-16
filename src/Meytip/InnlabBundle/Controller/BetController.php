@@ -37,6 +37,14 @@ class BetController extends Controller
         $dm = $this->get('doctrine_mongodb')->getManager();
         $fbid = $params['user'];
         $user = $dm->getRepository('MeytipInnlabBundle:User')->findOneBy(array('facebookid' => $fbid));
+        if($user->getCash() < $sched->getAmount())
+        {
+            $view = View::create()->
+                setStatusCode(200)->
+                setFormat('json')->
+                setData('errorcash');
+            return $this->get('fos_rest.view_handler')->handle($view);
+        }
         if(!is_null($user))
         {
             $user->setCash($user->getCash() - $sched->getAmount());
