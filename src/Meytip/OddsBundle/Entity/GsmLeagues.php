@@ -15,11 +15,11 @@ class GsmLeagues
     /**
      * @var string
      *
-     * @ORM\Column(name="unique", type="string", length=30, nullable=false)
+     * @ORM\Column(name="uniq", type="string", length=30, nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $unique;
+    private $uniq;
 
     /**
      * @var integer
@@ -361,5 +361,15 @@ class GsmLeagues
     public function getTimelogged()
     {
         return $this->timelogged;
+    }
+
+    /**
+     * Get uniq
+     *
+     * @return string 
+     */
+    public function getUniq()
+    {
+        return $this->uniq;
     }
 }

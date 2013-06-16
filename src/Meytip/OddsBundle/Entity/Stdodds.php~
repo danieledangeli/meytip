@@ -12,12 +12,18 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Stdodds
 {
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
     /**
      * @var integer
      *
      * @ORM\Column(name="offer_id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $offerId;
 

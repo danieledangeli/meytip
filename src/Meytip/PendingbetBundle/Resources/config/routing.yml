@@ -1,3 +1,0 @@
-meytip_pendingbet_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: MeytipPendingbetBundle:Default:index }

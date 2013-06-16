@@ -36,7 +36,7 @@ class Quote {
      */
     protected $nofinal;
 
-
+   
     /**
      *
      * @ORM\ManyToOne(targetEntity="Team", inversedBy="quotes")

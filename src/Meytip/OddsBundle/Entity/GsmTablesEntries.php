@@ -15,11 +15,11 @@ class GsmTablesEntries
     /**
      * @var string
      *
-     * @ORM\Column(name="unique", type="string", length=30, nullable=false)
+     * @ORM\Column(name="uniq", type="string", length=30, nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $unique;
+    private $uniq;
 
     /**
      * @var integer
@@ -451,5 +451,15 @@ class GsmTablesEntries
     public function getLastUpdated()
     {
         return $this->lastUpdated;
+    }
+
+    /**
+     * Get uniq
+     *
+     * @return string 
+     */
+    public function getUniq()
+    {
+        return $this->uniq;
     }
 }

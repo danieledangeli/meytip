@@ -25,7 +25,6 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new FOS\UserBundle\FOSUserBundle(),
 
-            new Meytip\PendingbetBundle\MeytipPendingbetBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

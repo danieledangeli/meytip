@@ -12,12 +12,16 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Stdodds
 {
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     */
+    protected $id;
+
     /**
      * @var integer
-     *
      * @ORM\Column(name="offer_id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $offerId;
 
@@ -271,5 +275,28 @@ class Stdodds
     public function getLastChange()
     {
         return $this->lastChange;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set offerId
+     *
+     * @param integer $offerId
+     * @return Stdodds
+     */
+    public function setOfferId($offerId)
+    {
+        $this->offerId = $offerId;
+    
+        return $this;
     }
 }
