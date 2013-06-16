@@ -36,10 +36,6 @@ class Quote {
      */
     protected $nofinal;
 
-    /**
-     * @ORM\Column(type="string", length=240)
-     */
-    protected $esito;
 
     /**
      *
