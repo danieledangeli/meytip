@@ -12,7 +12,7 @@ class InnLabController extends Controller
         $users_mongo = $this->get('doctrine_mongodb')
             ->getManager()
             ->createQueryBuilder('MeytipInnlabBundle:User')
-            ->sort('cash', 'DESC')
+            ->sort('leaverage', 'DESC')
             ->getQuery()
             ->execute();
 
