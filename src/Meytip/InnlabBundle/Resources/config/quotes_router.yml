@@ -14,4 +14,7 @@ user:
     type: rest
     resource: Meytip\InnlabBundle\Controller\UserController
     schemes:  [https]
-
+stands:
+    type: rest
+    resource: Meytip\InnlabBundle\Controller\InnLabController
+    schemes:  [https]
