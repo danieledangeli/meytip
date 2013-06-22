@@ -80,6 +80,8 @@ class FeedController extends Controller
         $feeds = $user->getScheds();
         $entities = array();
         foreach($feeds as $f) {
+            if($f->getAmount() > 0)
+            {
             $bets =  $f->getEventbets();
 
             $data = array();
@@ -109,6 +111,7 @@ class FeedController extends Controller
             $data['quote'] = $quotes;
 
             $entities[] = $data;
+            }
         }
 
         $view = View::create()->
@@ -145,6 +148,9 @@ class FeedController extends Controller
 
 
         foreach($feeds as $f) {
+            if($f->getAmount() > 0){
+
+
             $bets =  $f->getEventbets();
 
             $data = array();
@@ -178,6 +184,7 @@ class FeedController extends Controller
             $data['quote'] = $quotes;
 
             $entities[] = $data;
+            }
         }
 
         $view = View::create()->
