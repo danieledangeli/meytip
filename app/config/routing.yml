@@ -13,6 +13,7 @@ MeytipInnlabBundle_quote:
         prefix:   /quote
         schemes:  [https]
 
+#nocheck
 #meytip_innlab_check:
  #   pattern:  /check
   #  defaults: { _controller: MeytipInnlabBundle:Check:check }
