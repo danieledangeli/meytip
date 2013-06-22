@@ -13,9 +13,9 @@ MeytipInnlabBundle_quote:
         prefix:   /quote
         schemes:  [https]
 
-meytip_innlab_check:
-    pattern:  /check
-    defaults: { _controller: MeytipInnlabBundle:Check:check }
+#meytip_innlab_check:
+ #   pattern:  /check
+  #  defaults: { _controller: MeytipInnlabBundle:Check:check }
 
 meytip_innlab_repair:
     pattern:  /repair
