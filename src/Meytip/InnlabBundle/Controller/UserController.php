@@ -41,7 +41,7 @@ class UserController extends Controller
 
                 $user = $userManager->createUser();
                 $user->setUsername($params['username']);
-                $user->setEmail('mail');
+                $user->setEmail($params['username']);
                 $user->setPassword('fakepwd');
                 $user->setFacebookid($params['id']);
                 $user->setFacebooklink($params['link']);

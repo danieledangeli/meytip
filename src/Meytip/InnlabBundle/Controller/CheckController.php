@@ -37,4 +37,24 @@ class CheckController extends Controller
 
     }
 
+    public function repairAction()
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $users_mongo = $dm->getRepository('MeytipInnlabBundle:User')->findAll();
+        $users = array();
+        $users = $users_mongo;
+
+
+        foreach($users as $u)
+        {
+            $u->setEmail($u->getUsername());
+        }
+
+
+        $dm->flush();
+        return new Response(json_encode('flushed'));
+
+
+    }
+
 }
