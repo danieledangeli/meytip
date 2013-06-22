@@ -53,7 +53,7 @@ class CheckController extends Controller
         $i = 1;
         foreach($users as $u)
         {
-           echo $i.") ".$u->getName()." ".(int)$u->getCash()."\n";
+           echo $i.") ".$u->getName()." ".(int)$u->getCash()."<br>";
            $i++;
         }
 
