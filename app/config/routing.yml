@@ -17,7 +17,7 @@ meytip_innlab_check:
     pattern:  /check
     defaults: { _controller: MeytipInnlabBundle:Check:check }
 
-meytip_innlab_check:
+meytip_innlab_repair:
     pattern:  /repair
     defaults: { _controller: MeytipInnlabBundle:Check:repair }
 
