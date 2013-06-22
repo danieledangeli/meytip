@@ -23,5 +23,16 @@ class QuotesController extends Controller
 
     } // "get_quotes"   [GET] /quotes
 
+    public function getFinalQuotesAction()
+    {
+        $entities = $this->getDoctrine()->getRepository('MeytipInnlabBundle:QuoteFinale')->findAll();
+        $view = View::create()->
+            setStatusCode(200)->
+            setFormat('json')->
+            setData($entities);
+        return $this->get('fos_rest.view_handler')->handle($view);
+
+    } // "get_quotes"   [GET] /quotes
+
 
 }

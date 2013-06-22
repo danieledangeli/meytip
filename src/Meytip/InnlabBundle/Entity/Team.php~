@@ -17,6 +17,7 @@ class Team {
     public function  __construct()
     {
         $this->quotes = new ArrayCollection();
+        $$this->finalequote = new ArrayCollection();
     }
     /**
      * @ORM\Id
@@ -53,7 +54,13 @@ class Team {
     protected $quotes;
 
     /**
-     * @ORM\Column(type="string", length=240)
+     * @Exclude
+     * @ORM\OneToMany(targetEntity="QuoteFinale", mappedBy="team")
+     */
+    protected $finalequote;
+
+    /**
+     * @ORM\Column(type="string", length=240, nullable=true)
      */
     protected $esito;
 
@@ -196,5 +203,28 @@ class Team {
     public function __toString(){
 
         return $this->getName();
+    }
+
+    /**
+     * Set esito
+     *
+     * @param string $esito
+     * @return Team
+     */
+    public function setEsito($esito)
+    {
+        $this->esito = $esito;
+    
+        return $this;
+    }
+
+    /**
+     * Get esito
+     *
+     * @return string 
+     */
+    public function getEsito()
+    {
+        return $this->esito;
     }
 }

@@ -7,6 +7,9 @@ MeytipInnlabBundle_team:
         resource: "@MeytipInnlabBundle/Resources/config/routing/team.yml"
         prefix:   /team
 
+MeytipInnlabBundle_team:
+        resource: "@MeytipInnlabBundle/Resources/config/routing/quotefinale.yml"
+        prefix:   /quotefinale
 
 MeytipInnlabBundle_quote:
         resource: "@MeytipInnlabBundle/Resources/config/routing/quote.yml"

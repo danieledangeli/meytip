@@ -1,0 +1,30 @@
+quotefinale:
+    pattern:  /
+    defaults: { _controller: "MeytipInnlabBundle:QuoteFinale:index" }
+
+quotefinale_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MeytipInnlabBundle:QuoteFinale:show" }
+
+quotefinale_new:
+    pattern:  /new
+    defaults: { _controller: "MeytipInnlabBundle:QuoteFinale:new" }
+
+quotefinale_create:
+    pattern:  /create
+    defaults: { _controller: "MeytipInnlabBundle:QuoteFinale:create" }
+    requirements: { _method: post }
+
+quotefinale_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MeytipInnlabBundle:QuoteFinale:edit" }
+
+quotefinale_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MeytipInnlabBundle:QuoteFinale:update" }
+    requirements: { _method: post|put }
+
+quotefinale_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MeytipInnlabBundle:QuoteFinale:delete" }
+    requirements: { _method: post|delete }

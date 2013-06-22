@@ -17,6 +17,7 @@ class Team {
     public function  __construct()
     {
         $this->quotes = new ArrayCollection();
+        $$this->finalequote = new ArrayCollection();
     }
     /**
      * @ORM\Id
@@ -51,6 +52,12 @@ class Team {
      * @ORM\OneToMany(targetEntity="Quote", mappedBy="team")
      */
     protected $quotes;
+
+    /**
+     * @Exclude
+     * @ORM\OneToMany(targetEntity="QuoteFinale", mappedBy="team")
+     */
+    protected $finalequote;
 
     /**
      * @ORM\Column(type="string", length=240, nullable=true)
@@ -219,5 +226,38 @@ class Team {
     public function getEsito()
     {
         return $this->esito;
+    }
+
+    /**
+     * Add finalequote
+     *
+     * @param \Meytip\InnlabBundle\Entity\QuoteFinale $finalequote
+     * @return Team
+     */
+    public function addFinalequote(\Meytip\InnlabBundle\Entity\QuoteFinale $finalequote)
+    {
+        $this->finalequote[] = $finalequote;
+    
+        return $this;
+    }
+
+    /**
+     * Remove finalequote
+     *
+     * @param \Meytip\InnlabBundle\Entity\QuoteFinale $finalequote
+     */
+    public function removeFinalequote(\Meytip\InnlabBundle\Entity\QuoteFinale $finalequote)
+    {
+        $this->finalequote->removeElement($finalequote);
+    }
+
+    /**
+     * Get finalequote
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getFinalequote()
+    {
+        return $this->finalequote;
     }
 }

@@ -1,0 +1,4 @@
+meytip_innlab_quotefinale:
+    resource: "@MeytipInnlabBundle/Resources/config/routing/quotefinale.yml"
+    prefix:   /quotefinale
+
