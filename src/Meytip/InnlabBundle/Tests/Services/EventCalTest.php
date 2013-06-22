@@ -36,7 +36,7 @@ class EventCalcTest extends WebTestCase  {
 
         $bet2 = new \Meytip\InnlabBundle\Document\InnLabBet();
         $bet2->setEventid(1);
-        $bet2->setProno("finale no");
+        $bet2->setProno("finale sì");
 
         $sched = new \Meytip\InnlabBundle\Document\InnLabSched();
         $sched->addEventbet($bet);

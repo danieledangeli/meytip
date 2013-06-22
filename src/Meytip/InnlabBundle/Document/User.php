@@ -53,6 +53,22 @@ class User extends BaseUser
     protected $scheds;
 
     /**
+     * @param mixed $leaverage
+     */
+    public function setLeaverage($leaverage)
+    {
+        $this->leaverage = $leaverage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLeaverage()
+    {
+        return $this->leaverage;
+    }
+
+    /**
      * @Expose
      * @Groups({"login"})
      */
@@ -68,6 +84,13 @@ class User extends BaseUser
      * @Groups({"login"})
      */
     protected $cash;
+
+
+    /**
+     * @MongoDB\Int
+     * @Groups({"login"})
+     */
+    protected $leaverage;
 
 
     public function __construct()

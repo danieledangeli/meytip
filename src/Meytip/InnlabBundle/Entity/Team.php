@@ -17,7 +17,7 @@ class Team {
     public function  __construct()
     {
         $this->quotes = new ArrayCollection();
-        $$this->finalequote = new ArrayCollection();
+        $this->finalequote = new ArrayCollection();
     }
     /**
      * @ORM\Id

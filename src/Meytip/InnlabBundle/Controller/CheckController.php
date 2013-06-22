@@ -43,7 +43,7 @@ class CheckController extends Controller
         $users_mongo = $this->get('doctrine_mongodb')
             ->getManager()
             ->createQueryBuilder('MeytipInnlabBundle:User')
-            ->sort('cash', 'DESC')
+            ->sort('leaverage', 'DESC')
             ->getQuery()
             ->execute();
 
@@ -66,14 +66,44 @@ class CheckController extends Controller
     public function repairAction()
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
-        $users_mongo = $dm->getRepository('MeytipInnlabBundle:User')->findAll();
+
+        $users_mongo = $this->get('doctrine_mongodb')
+            ->getManager()
+            ->createQueryBuilder('MeytipInnlabBundle:User')
+            ->sort('cash', 'DESC')
+            ->getQuery()
+            ->execute();
         $users = array();
         $users = $users_mongo;
 
-
+        $i = 0;
         foreach($users as $u)
         {
-            $u->setEmail($u->getUsername());
+           $i++;
+           $u->setLeaverage(((int)$u->getCash()) / 100);
+           if($i == 1)
+           {
+               $u->setCash(500);
+           }
+            if($i == 2)
+            {
+                $u->setCash(350);
+            }
+            if($i == 3)
+            {
+                $u->setCash(200);
+            }
+            if($i == 4)
+            {
+                $u->setCash(150);
+            }
+            if($i > 4)
+            {
+                $u->setCash(100);
+            }
+
+            echo $u->getName() .' '. $u->getLeaverage() . "<br>";
+
         }
 
 
