@@ -105,7 +105,13 @@ class FeedController extends Controller
                 $event = $em->getRepository('MeytipInnlabBundle:Team')->find($bet->getEventid());
 
                 $eventbet['name'] = $event->getName();
-                $eventbet['quote'] = $event->getQuotes()[0];
+                if($bet->getProno() == 'finale sì' || $bet->getProno() == 'finale no' )
+                {
+                    $eventbet['quote'] = $event->getQuotes()[0];
+                }
+                else{
+                    $eventbet['quote'] = $event->getFinalequote()[0];
+                }
                 $eventbet['eventid'] = $bet->getEventid();
                 $eventbet['odds'] = $bet->getOdds();
                 $eventbet['prono'] = $bet->getProno();
@@ -178,7 +184,13 @@ class FeedController extends Controller
                 $event = $em->getRepository('MeytipInnlabBundle:Team')->find($bet->getEventid());
 
                 $eventbet['name'] = $event->getName();
-                $eventbet['quote'] = $event->getQuotes()[0];
+                if($bet->getProno() == 'finale sì' || $bet->getProno() == 'finale no' )
+                {
+                    $eventbet['quote'] = $event->getQuotes()[0];
+                }
+                else{
+                    $eventbet['quote'] = $event->getFinalequote()[0];
+                }
                 $eventbet['eventid'] = $bet->getEventid();
                 $eventbet['odds'] = $bet->getOdds();
                 $eventbet['prono'] = $bet->getProno();
