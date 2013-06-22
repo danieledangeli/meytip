@@ -52,6 +52,11 @@ class Team {
      */
     protected $quotes;
 
+    /**
+     * @ORM\Column(type="string", length=240, nullable=true)
+     */
+    protected $esito;
+
 
     /**
      * Get id
@@ -191,5 +196,28 @@ class Team {
     public function __toString(){
 
         return $this->getName();
+    }
+
+    /**
+     * Set esito
+     *
+     * @param string $esito
+     * @return Team
+     */
+    public function setEsito($esito)
+    {
+        $this->esito = $esito;
+    
+        return $this;
+    }
+
+    /**
+     * Get esito
+     *
+     * @return string 
+     */
+    public function getEsito()
+    {
+        return $this->esito;
     }
 }

@@ -229,4 +229,9 @@ class User extends BaseUser
     {
         return $this->cash;
     }
+
+    public function incrementCash($cash)
+    {
+        $this->cash = $cash + $this->cash;
+    }
 }

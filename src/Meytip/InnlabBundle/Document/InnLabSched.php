@@ -34,6 +34,7 @@ class InnLabSched {
      * @MongoDB\ReferenceOne(targetDocument="User", inversedBy="scheds")
      */
     private $user;
+
     /**
      * @MongoDB\Id
      */
@@ -51,6 +52,28 @@ class InnLabSched {
      * @Groups({"feed"})
      */
     protected $moltiplicatore;
+
+    /**
+     * @param mixed $win
+     */
+    public function setWin($win)
+    {
+        $this->win = $win;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWin()
+    {
+        return $this->win;
+    }
+
+    /**
+     * @MongoDB\Boolean
+     * @Groups({"feed"})
+     */
+    protected $win;
 
     /**
      * @MongoDB\Float

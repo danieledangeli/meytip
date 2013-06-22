@@ -45,6 +45,11 @@ class InnLabBet
      */
     protected $eventname;
 
+    /**
+     * @MongoDB\String
+     */
+    protected $checked;
+
 
     /**
      * @MongoDB\Date
@@ -221,5 +226,27 @@ class InnLabBet
     public function getEventname()
     {
         return $this->eventname;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param date $createdAt
+     * @return self
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return date $createdAt
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
     }
 }

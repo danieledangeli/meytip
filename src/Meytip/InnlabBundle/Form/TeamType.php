@@ -15,6 +15,7 @@ class TeamType extends AbstractType
             ->add('logopath')
             ->add('tagline')
             ->add('teewtidea')
+            ->add('esito')
         ;
     }
 

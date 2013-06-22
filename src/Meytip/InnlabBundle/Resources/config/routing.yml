@@ -1,3 +1,0 @@
-meytip_innlab_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: MeytipInnlabBundle:Default:index }

@@ -13,6 +13,11 @@ MeytipInnlabBundle_quote:
         prefix:   /quote
         schemes:  [https]
 
+meytip_innlab_check:
+    pattern:  /check
+    defaults: { _controller: MeytipInnlabBundle:Check:check }
+
+
 #fos user bundle routing
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

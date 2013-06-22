@@ -1,7 +1,13 @@
 parameters:
-#    meytip_innlab.example.class: Meytip\InnlabBundle\Example
+    mycalc.class:      Meytip\InnlabBundle\Services\EventCalc
+    myuserhelper.class: Meytip\InnlabBundle\Services\SchedHelper
+
 
 services:
-#    meytip_innlab.example:
-#        class: %meytip_innlab.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    event_calc:
+        class:        "%mycalc.class%"
+        arguments: ["@doctrine.orm.entity_manager"]
+
+    user_helper_calc:
+            class:     "%myuserhelper.class%"
+            arguments: ["@doctrine.orm.entity_manager","@event_calc"]
