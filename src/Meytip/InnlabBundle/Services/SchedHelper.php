@@ -30,14 +30,15 @@ class SchedHelper {
     public function updateUserScheds(User $user)
     {
         $userScheds = $user->getScheds();
+
+
         foreach($userScheds as $sched){
 
 
-            if(is_null($sched->getWin()))
+            if(!is_null($sched->getWin()))
             {
 
             $this->helperEvent->calculateInnLabEvents($sched->getEventbets());
-
 
 
 

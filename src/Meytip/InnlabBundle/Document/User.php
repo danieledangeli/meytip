@@ -87,7 +87,7 @@ class User extends BaseUser
 
 
     /**
-     * @MongoDB\Int
+     * @MongoDB\Float
      * @Groups({"login"})
      */
     protected $leaverage;

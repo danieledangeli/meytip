@@ -17,13 +17,13 @@ MeytipInnlabBundle_quote:
         schemes:  [https]
 
 #nocheck
-#meytip_innlab_check:
- #   pattern:  /check
-  #  defaults: { _controller: MeytipInnlabBundle:Check:check }
+meytip_innlab_check:
+    pattern:  /check
+    defaults: { _controller: MeytipInnlabBundle:Check:check }
 
-#meytip_innlab_repair:
- #   pattern:  /repair
-  #  defaults: { _controller: MeytipInnlabBundle:Check:repair }
+meytip_innlab_repair:
+     pattern:  /repair
+     defaults: { _controller: MeytipInnlabBundle:Check:repair }
 
 meytip_innlab_result:
     pattern:  /result
