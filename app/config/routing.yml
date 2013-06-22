@@ -19,7 +19,7 @@ meytip_innlab_check:
 
 meytip_innlab_check:
     pattern:  /repair
-    defaults: { _controller: MeytipInnlabBundle:Check:check }
+    defaults: { _controller: MeytipInnlabBundle:Repair:check }
 
 
 #fos user bundle routing
