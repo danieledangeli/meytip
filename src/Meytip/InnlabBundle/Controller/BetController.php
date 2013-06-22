@@ -27,17 +27,19 @@ class BetController extends Controller
             $params = json_decode($content, true); // 2nd param to get as array
         }
 
-        $sched = new InnLabSched();
-        $time = new \DateTime();
-        $sched->setCreatedAt($time);
-       // $sched->setMoltiplicatore($params['moltiplicatore']);
-        $sched->setAmount($params['amount']);
-        $bets = $params['bets'];
+        $amount = intval($params['amount']);
+        $checked = false;
+        if(is_int($amount))
+        {
+            if($amount > 0) $checked = true;
+        }
+
 
         $dm = $this->get('doctrine_mongodb')->getManager();
         $fbid = $params['user'];
         $user = $dm->getRepository('MeytipInnlabBundle:User')->findOneBy(array('facebookid' => $fbid));
-        if($user->getCash() < $sched->getAmount())
+
+        if(!$checked || is_null($user) || $user->getCash() < $amount)
         {
             $view = View::create()->
                 setStatusCode(200)->
@@ -45,15 +47,19 @@ class BetController extends Controller
                 setData('errorcash');
             return $this->get('fos_rest.view_handler')->handle($view);
         }
-        if(!is_null($user))
-        {
+        else{
+            $sched = new InnLabSched();
+            $time = new \DateTime();
+            $sched->setCreatedAt($time);
+            $sched->setAmount($amount);
+
             $user->setCash($user->getCash() - $sched->getAmount());
             $user->setPending();
             $sched->setUser($user);
 
-        }
 
 
+        $bets = $params['bets'];
         foreach($bets as $bet)
         {
             $inbet = new \Meytip\InnlabBundle\Document\InnLabBet();
@@ -68,8 +74,8 @@ class BetController extends Controller
         }
 
         $dm->persist($sched);
-        $dm->persist($user);
         $dm->flush();
+
         $contest = new SerializationContext();
         $contest->setGroups(array('login'));
         $view = View::create()->
@@ -78,6 +84,7 @@ class BetController extends Controller
             setSerializationContext($contest)->
             setData($sched);
         return $this->get('fos_rest.view_handler')->handle($view);
+        }
     }
 
 }
