@@ -21,6 +21,9 @@ meytip_innlab_repair:
     pattern:  /repair
     defaults: { _controller: MeytipInnlabBundle:Check:repair }
 
+meytip_innlab_result:
+    pattern:  /result
+    defaults: { _controller: MeytipInnlabBundle:Check:result}
 
 #fos user bundle routing
 fos_user_security:

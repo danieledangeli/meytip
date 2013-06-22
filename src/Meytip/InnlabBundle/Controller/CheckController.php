@@ -37,6 +37,32 @@ class CheckController extends Controller
 
     }
 
+    public function resultAction()
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $users_mongo = $this->get('doctrine_mongodb')
+            ->getManager()
+            ->createQueryBuilder('MeytipInnlabBundle:User')
+            ->sort('cash', 'DESC')
+            ->getQuery()
+            ->execute();
+
+        $users = array();
+        $users = $users_mongo;
+
+        $i = 1;
+        foreach($users as $u)
+        {
+           echo $i.") ".$u->getName()." ".(int)$u->getCash()."\n";
+           $i++;
+        }
+
+
+
+        return new Response();
+
+
+    }
     public function repairAction()
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
