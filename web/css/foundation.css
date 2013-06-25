@@ -11,7 +11,7 @@ body {
 
 body {
 	/*background-color: rgb(126, 159, 172);*/
-  background:url(/meytip/web/img/subtle_surface.png);
+  background:url(/back/meytip/web/img/subtle_surface.png);
   background-repeat:repeat-x repeat-y;
   color: #222222;
   padding: 0;
@@ -4269,7 +4269,7 @@ a.th {
 /* CUSTOM STYLE */
 .userpanel {
   padding: 0.7em;
-  background-image:url(/meytip/web/img/patternpanel.png);
+  background-image:url(/back/meytip/web/img/patternpanel.png);
   background-repeat:repeat-x repeat-y;
   border-bottom: 2px solid rgba(214, 214, 214, 1);
  }
