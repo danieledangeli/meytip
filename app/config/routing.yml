@@ -14,7 +14,7 @@ MeytipInnlabBundle_quotefinale:
 MeytipInnlabBundle_betfinal:
         resource: "@MeytipInnlabBundle/Resources/config/routing/innlabbet.yml"
         prefix:   /innlabbet
-         schemes:  [https]
+        schemes:  [https]
 
 MeytipInnlabBundle_quote:
         resource: "@MeytipInnlabBundle/Resources/config/routing/quote.yml"
