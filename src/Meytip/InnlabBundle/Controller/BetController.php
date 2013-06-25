@@ -10,6 +10,7 @@ use MongoDBODMProxies\__CG__\Meytip\PendingbetBundle\Document\InnLabBet;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class BetController extends Controller
 {
@@ -38,6 +39,7 @@ class BetController extends Controller
         $dm = $this->get('doctrine_mongodb')->getManager();
         $fbid = $params['user'];
         $user = $dm->getRepository('MeytipInnlabBundle:User')->findOneBy(array('facebookid' => $fbid));
+        if(is_null($user))  $user = $dm->getRepository('MeytipInnlabBundle:User')->find($fbid);
 
         if(!$checked || is_null($user) || $user->getCash() < $amount)
         {

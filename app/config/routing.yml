@@ -7,14 +7,18 @@ MeytipInnlabBundle_team:
         resource: "@MeytipInnlabBundle/Resources/config/routing/team.yml"
         prefix:   /team
 
-MeytipInnlabBundle_team:
+MeytipInnlabBundle_quotefinale:
         resource: "@MeytipInnlabBundle/Resources/config/routing/quotefinale.yml"
         prefix:   /quotefinale
+
+MeytipInnlabBundle_betfinal:
+        resource: "@MeytipInnlabBundle/Resources/config/routing/innlabbet.yml"
+        prefix:   /innlabbet
 
 MeytipInnlabBundle_quote:
         resource: "@MeytipInnlabBundle/Resources/config/routing/quote.yml"
         prefix:   /quote
-        schemes:  [https]
+        schemes:  [http]
 
 #nocheck
 #meytip_innlab_check:

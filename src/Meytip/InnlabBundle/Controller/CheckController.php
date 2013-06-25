@@ -80,7 +80,7 @@ class CheckController extends Controller
         foreach($users as $u)
         {
            $i++;
-           $u->setLeaverage(((int)$u->getCash()) / 100);
+           $u->setLeaverage($u->getCash() / 100);
            if($i == 1)
            {
                $u->setCash(500);

@@ -1,0 +1,3 @@
+scommessa:
+    pattern:  /
+    defaults: { _controller: "MeytipInnlabBundle:InnLab:events" }
