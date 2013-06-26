@@ -1,3 +1,6 @@
 scommessa:
     pattern:  /
     defaults: { _controller: "MeytipInnlabBundle:InnLab:events" }
+feed:
+    pattern:  /feed/
+    defaults: { _controller: "MeytipInnlabBundle:InnLab:innlabfeed" }

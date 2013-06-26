@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Meytip</title>
+    <link rel="stylesheet" href="{{ asset('css/foundation.css') }}" />
+    <script src="{{ asset('js/vendor/custom.modernizr.js') }}"></script>
+</head>
+<body>
+    <div class="row">
+        <div>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            {% else %}
+                <div class="panel callout large-4 large-offset-4 bassa">
+                    <a href="{{ path('fos_user_security_login') }}"><h5>{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</h5></a>
+                </div>
+            {% endif %}
+        </div>
+      <div class="large-4 columns large-offset-4 panel">
+
+
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="flash-{{ type }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+      </div>
+    </div>
+    </body>
+</html>
