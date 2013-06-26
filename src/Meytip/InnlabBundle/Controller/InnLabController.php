@@ -129,6 +129,7 @@ class InnLabController extends Controller
                 $event = $em->getRepository('MeytipInnlabBundle:Team')->find($bet->getEventid());
 
                 $eventbet['name'] = $event->getName();
+
                 if($bet->getProno() == 'finale sì' || $bet->getProno() == 'finale no' )
                 {
                     $eventbet['quote'] = $event->getQuotes()[0];
@@ -145,9 +146,13 @@ class InnLabController extends Controller
 
 
             }
-            $data['quote'] = $quotes;
+            if(array_count_values($quotes) > 0){
 
-            $entities[] = $data;
+                $data['quote'] = $quotes;
+                $entities[] = $data;
+            }
+
+
         }
 
         return $entities;
