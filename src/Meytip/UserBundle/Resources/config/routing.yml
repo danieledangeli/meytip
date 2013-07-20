@@ -1,0 +1,3 @@
+meytip_user_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: MeytipUserBundle:Default:index }

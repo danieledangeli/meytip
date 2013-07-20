@@ -1,8 +1,0 @@
-parameters:
-    odds_filter.class:      Meytip\OddsBundle\Services\OddsFilter
-
-
-services:
-    odds_filter:
-        class:        "%odds_filter.class%"
-        arguments:    [@doctrine]

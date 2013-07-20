@@ -1,3 +1,19 @@
+meytip_event:
+    resource: "@MeytipEventBundle/Resources/config/routing.yml"
+    prefix:   /
+
+meytip_tournament:
+    resource: "@MeytipTournamentBundle/Resources/config/routing.yml"
+    prefix:   /
+
+meytip_stats:
+    resource: "@MeytipStatsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+meytip_user:
+    resource: "@MeytipUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 # quotes rest controller
 acme_hello:
     type: rest

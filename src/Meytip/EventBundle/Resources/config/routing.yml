@@ -1,0 +1,3 @@
+meytip_event_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: MeytipEventBundle:Default:index }

@@ -1,3 +1,0 @@
-meytip_odds_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: MeytipOddsBundle:Default:index }

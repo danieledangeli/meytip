@@ -16,7 +16,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            //new Meytip\OddsBundle\MeytipOddsBundle(),
             new Meytip\InnlabBundle\MeytipInnlabBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
@@ -24,7 +23,13 @@ class AppKernel extends Kernel
             new FOS\RestBundle\FOSRestBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 
+            new Meytip\UserBundle\MeytipUserBundle(),
+            new Meytip\StatsBundle\MeytipStatsBundle(),
+            new Meytip\TournamentBundle\MeytipTournamentBundle(),
+            new Meytip\EventBundle\MeytipEventBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
