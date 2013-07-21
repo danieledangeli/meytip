@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 
 /**
+ * Base user personal statistic
  * @ORM\Entity
  * @ORM\Table(name="statistic")
  *
@@ -25,4 +26,5 @@ class Statistic {
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     protected $user;
+
 }
